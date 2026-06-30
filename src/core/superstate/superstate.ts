@@ -48,6 +48,7 @@ import { SpacesCommandsAdapter } from "./commands";
 
 import { linkContextRow } from "core/utils/contexts/linkContextRow";
 import { allMetadata } from "core/utils/metadata";
+import { processWithConcurrencyLimit } from "utils/batch-processor";
 import { IAssetManager } from "shared/types/assets";
 import { Metadata } from "shared/types/metadata";
 import { Indexer } from "./workers/indexer/indexer";
@@ -228,8 +229,11 @@ public api: API;
         this.contextStateQueue = Promise.resolve();
 
 
-        //Intiate Workers
-        this.indexer = new Indexer(2, this)
+        //Intiate Workers - Use CPU core count for optimal parallelism
+        const workerCount = typeof navigator !== 'undefined' && navigator.hardwareConcurrency 
+            ? Math.max(2, navigator.hardwareConcurrency) 
+            : 4;
+        this.indexer = new Indexer(workerCount, this)
         
         this.eventsDispatcher.addListener('pathStateUpdated', () => {
             debounce(() => this.reindexSearch(), 300)();
@@ -304,7 +308,7 @@ public api: API;
         const promises = this.allSpaces().filter(f => f.type != 'default').map(f => f.space).map(l => 
             this.reloadActions(l)
             );
-            await Promise.all(promises);
+            await processWithConcurrencyLimit(promises, p => p, 4);
         
     }
     public async initializeKits () {
@@ -348,7 +352,7 @@ public api: API;
             this.onSpaceDeleted(f))
             ;
             
-        await Promise.all(promises);
+        await processWithConcurrencyLimit(promises, p => p, 4);
         
     }
 
