@@ -2,7 +2,7 @@ import i18n from "shared/i18n";
 
 import MakeMDPlugin from 'main';
 import { normalizePath } from 'obsidian';
-import { emojis } from 'shared/assets/emoji';
+import { emojis } from 'shared/assets/emojis';
 import {
   Asset,
   AssetCacheStats,

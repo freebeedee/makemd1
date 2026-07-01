@@ -9,7 +9,7 @@ import React from "react";
 
 import { Container } from "react-dom";
 import { Root, createRoot } from "react-dom/client";
-import { emojis } from "shared/assets/emoji";
+import { emojis } from "shared/assets/emojis";
 import { Pos, Rect } from "shared/types/Pos";
 import { EmojiData } from "shared/types/emojis";
 import { TargetLocation } from "shared/types/path";
