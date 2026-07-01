@@ -233,7 +233,14 @@ export class Indexer {
         return;
     }
     if (job.type == 'contexts') {
-        const spaces = this.cache.allSpaces().filter(f => f.type != 'default').map(f => f.space)
+        // Optimized: Use for-loop instead of filter+map to avoid double iteration
+        const spaces = [];
+        const allSpaces = this.cache.allSpaces();
+        for (let i = 0; i < allSpaces.length; i++) {
+          if (allSpaces[i].type != 'default') {
+            spaces.push(allSpaces[i].space);
+          }
+        }
         const payloads = new Map<string, any>();
         for (const space of spaces) {
             const dbExists = await this.cache.spaceManager.contextInitiated(space.path);
