@@ -305,7 +305,15 @@ public api: API;
     }
     public async initializeActions () {
         await this.reloadSystemActions();
-        const promises = this.allSpaces().filter(f => f.type != 'default').map(f => f.space).map(l => 
+        // Optimized: Use for-loop instead of filter+map+map to avoid multiple iterations
+        const allSpaces = this.allSpaces();
+        const nonDefaultSpaces: string[] = [];
+        for (let i = 0; i < allSpaces.length; i++) {
+          if (allSpaces[i].type != 'default') {
+            nonDefaultSpaces.push(allSpaces[i].space);
+          }
+        }
+        const promises = nonDefaultSpaces.map(l => 
             this.reloadActions(l)
             );
             await processWithConcurrencyLimit(promises, p => p, 4);
@@ -599,7 +607,14 @@ public api: API;
                 if (spaceState) {
                     this.reloadSpace(spaceState.space).then(f => this.onSpaceDefinitionChanged(f, spaceState.metadata))
                 }
-                const allContextsWithFile = pathState.spaces.map(f => this.spacesIndex.get(f)?.space).filter(f => f);   
+                // Optimized: Use for-loop instead of map+filter to avoid double iteration
+                const allContextsWithFile: SpaceInfo[] = [];
+                for (let i = 0; i < pathState.spaces.length; i++) {
+                  const space = this.spacesIndex.get(pathState.spaces[i])?.space;
+                  if (space) {
+                    allContextsWithFile.push(space);
+                  }
+                }
                 this.addToContextStateQueue(() => updateContextWithProperties(this, path, allContextsWithFile));
                     this.dispatchEvent("pathStateUpdated", {path: path})
                 }
@@ -626,7 +641,14 @@ public api: API;
             this.tagsMap.delete(oldPath)
             this.pathsIndex.delete(oldPath);
 
-            const allContextsWithPath = oldSpaces.map(f => this.spacesIndex.get(f)).filter(f => f);
+            // Optimized: Use for-loop instead of map+filter to avoid double iteration
+            const allContextsWithPath: SpaceState[] = [];
+            for (let i = 0; i < oldSpaces.length; i++) {
+              const spaceState = this.spacesIndex.get(oldSpaces[i]);
+              if (spaceState) {
+                allContextsWithPath.push(spaceState);
+              }
+            }
 
             // Index the new path FIRST so it's available when contexts reload
             await this.reloadPath(newFilePath, true)
