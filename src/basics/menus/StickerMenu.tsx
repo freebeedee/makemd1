@@ -9,7 +9,7 @@ import {
   TFile,
 } from "obsidian";
 import React from "react";
-import { emojis } from "shared/assets/emoji";
+import { emojis } from "shared/assets/emojis";
 import i18n from "shared/i18n";
 import { Emoji, EmojiData } from "shared/types/emojis";
 import { emojiFromString } from "shared/utils/stickers";
