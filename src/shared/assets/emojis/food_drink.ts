@@ -135,4 +135,4 @@ export const food_drink: EmojiData["food_drink"] = [
     { n: ["jar"], u: "1fad9" },
     { n: ["amphora"], u: "1f3fa" },
   ],
-];
+};

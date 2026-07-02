@@ -239,4 +239,4 @@ export const travel_places: EmojiData["travel_places"] = [
     { n: ["droplet"], u: "1f4a7" },
     { n: ["ocean", "water wave"], u: "1f30a" },
   ],
-];
+};

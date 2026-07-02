@@ -270,4 +270,4 @@ export const objects: EmojiData["objects"] = [
     { n: ["placard"], u: "1faa7" },
     { n: ["identification card"], u: "1faaa" },
   ],
-];
+};
