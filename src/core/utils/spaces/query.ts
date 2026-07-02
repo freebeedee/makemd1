@@ -1,5 +1,5 @@
 import { filterFnTypes } from "core/utils/contexts/predicate/filterFns/filterFnTypes";
-import { isString } from "lodash";
+import { isString } from "lodash-es";
 import { PathState } from "shared/types/PathState";
 import { FilterDef, FilterGroupDef, JoinDefGroup } from "shared/types/spaceDef";
 import { parseProperty } from "utils/parsers";

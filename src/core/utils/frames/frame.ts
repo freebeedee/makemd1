@@ -1,6 +1,6 @@
 import * as acorn from "acorn";
 import { simple } from "acorn-walk";
-import _ from "lodash";
+import _ from "lodash-es";
 import { Superstate } from "makemd-core";
 import { defaultFrameSchema } from "schemas/frames";
 import { fieldSchema } from "shared/schemas/fields";

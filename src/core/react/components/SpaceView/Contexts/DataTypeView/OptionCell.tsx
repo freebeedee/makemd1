@@ -7,7 +7,7 @@ import { parseSourceOptions } from "core/schemas/fieldValueUtils";
 import { parseFieldValue } from "core/schemas/parseFieldValue";
 import { getColorPaletteById, getColors } from "core/utils/colorPalette";
 import { serializeOptionValue } from "core/utils/serializer";
-import { uniq } from "lodash";
+import { uniq } from "lodash-es";
 import { SelectMenuProps, SelectOption, Superstate } from "makemd-core";
 import React, {
   PropsWithChildren,

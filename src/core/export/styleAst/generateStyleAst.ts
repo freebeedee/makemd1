@@ -1,4 +1,4 @@
-import { isNumber, isString } from "lodash";
+import { isNumber, isString } from "lodash-es";
 
 import { StyleAst } from "shared/types/frameExec";
 

@@ -6,7 +6,7 @@ import {
 } from "core/utils/frames/frame";
 import { executeTreeNode } from "core/utils/frames/runner";
 import { renameKey } from "core/utils/objects";
-import _, { isEqual, uniqueId } from "lodash";
+import _, { isEqual, uniqueId } from "lodash-es";
 import { Superstate } from "makemd-core";
 import React, {
   MutableRefObject,

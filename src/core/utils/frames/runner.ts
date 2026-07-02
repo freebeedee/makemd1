@@ -6,6 +6,7 @@ import { FrameNode, FrameTreeProp } from 'shared/types/mframe';
 import { uniq } from 'shared/utils/array';
 import { buildExecutable } from './executable';
 import { linkTreeNodes } from './linker';
+import { createSafeFunction } from 'shared/utils/safeEval';
 
 export type ResultStore = { state: FrameState, newState: FrameState, slides: FrameState, prevState: FrameState, styleAsts?: StyleAst[] };
 
@@ -207,18 +208,13 @@ export const executeNode = async (executable: FrameExecutable, results: ResultSt
     return actions;
 }
 export const executeCode =  (code: any, environment: {[key: string]: any}) => {
-    // let result;
+    // Use safe evaluation instead of new Function to prevent arbitrary code execution
     const isMultiLine = (typeof code === 'string' || code instanceof String) ? code.includes('\n') : false;
-            // Execute the code block.
-            
-            const func = isMultiLine
-                ? new Function(`with(this) { ${code} }`)
-                : new Function(`with(this) { return ${code}; }`);
-                return func.call(environment);
-            // if (result instanceof Promise) {
-            //     result = await result;
-            // }
-// return result;
+    
+    const func = isMultiLine
+        ? createSafeFunction(`with(this) { ${code} }`)
+        : createSafeFunction(`return ${code}`);
+    return func.call(environment);
 }
 
 const executePropsCodeBlocks = async (executable: FrameExecutable, results: ResultStore, contexts: FrameContexts, api: API): Promise<ResultStore> => {

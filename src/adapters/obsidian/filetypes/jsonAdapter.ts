@@ -1,7 +1,7 @@
 
 import { AFile, FileTypeAdapter, FilesystemMiddleware } from "makemd-core";
 
-import { omit } from "lodash";
+import { omit } from "lodash-es";
 import MakeMDPlugin from "main";
 import { safelyParseJSON } from "shared/utils/json";
 import { parseProperty } from "utils/parsers";

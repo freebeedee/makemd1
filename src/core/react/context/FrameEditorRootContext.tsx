@@ -11,7 +11,7 @@ import { executableChanged } from "core/utils/frames/frame";
 import { newUniqueNode } from "core/utils/frames/frames";
 import { relinkProps } from "core/utils/frames/linker";
 import { frameToNode, nodeToFrame } from "core/utils/frames/nodes";
-import _ from "lodash";
+import _ from "lodash-es";
 import { Superstate } from "makemd-core";
 import React, {
   createContext,

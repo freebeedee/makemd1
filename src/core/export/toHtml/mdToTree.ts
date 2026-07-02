@@ -1,6 +1,6 @@
 
 import { wrapQuotes } from "core/utils/strings";
-import { uniqueId } from "lodash";
+import { uniqueId } from "lodash-es";
 import { Superstate } from "makemd-core";
 import { Html, Parent, Root, RootContent } from "mdast";
 import { fromMarkdown } from "mdast-util-from-markdown";

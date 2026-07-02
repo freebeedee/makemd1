@@ -2,7 +2,7 @@ import i18n from "shared/i18n";
 
 import { parseFieldValue } from "core/schemas/parseFieldValue";
 import { SpaceManager } from "core/spaceManager/spaceManager";
-import { isInteger, isString } from "lodash";
+import { isInteger, isString } from "lodash-es";
 import { DBRow, SpaceProperty } from "shared/types/mdb";
 import { FrameNode, FrameRoot, FrameTreeProp, MFrame } from "shared/types/mframe";
 import { SpaceInfo } from "shared/types/spaceInfo";

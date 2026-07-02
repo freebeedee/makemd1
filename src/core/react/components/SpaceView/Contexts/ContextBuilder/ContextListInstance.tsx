@@ -11,7 +11,7 @@ import {
   updatePathRankInSpace,
 } from "core/superstate/utils/spaces";
 import { updateTableValue } from "core/utils/contexts/context";
-import _ from "lodash";
+import _ from "lodash-es";
 import { Superstate } from "makemd-core";
 import React, { useContext, useEffect, useState } from "react";
 import { defaultContextSchemaID } from "shared/schemas/context";

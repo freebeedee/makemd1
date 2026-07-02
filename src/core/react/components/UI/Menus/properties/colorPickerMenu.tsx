@@ -7,7 +7,7 @@ import {
   parseGradient,
   stringifyGradient,
 } from "core/utils/color/gradient";
-import { uniqueId, debounce } from "lodash";
+import { uniqueId, debounce } from "lodash-es";
 import i18n from "shared/i18n";
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import {

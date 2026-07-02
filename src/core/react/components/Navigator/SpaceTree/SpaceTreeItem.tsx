@@ -15,7 +15,7 @@ import {
   spaceRowHeight,
 } from "core/superstate/utils/spaces";
 import { isTouchScreen } from "core/utils/ui/screen";
-import { isString } from "lodash";
+import { isString } from "lodash-es";
 import { Superstate } from "makemd-core";
 import React, {
   CSSProperties,

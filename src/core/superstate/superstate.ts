@@ -13,7 +13,7 @@ import { folderForTagSpace, pathIsSpace } from "core/utils/spaces/space";
 import { spacePathFromName, tagSpacePathFromTag } from "core/utils/strings";
 import { parsePathState } from "core/utils/superstate/parser";
 import { serializePathState } from "core/utils/superstate/serializer";
-import _, { debounce } from "lodash";
+import _, { debounce } from "lodash-es";
 import * as math from 'mathjs';
 import { rootToFrame } from "schemas/frames";
 import { visualizationNode } from "schemas/kits";

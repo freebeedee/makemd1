@@ -60,7 +60,7 @@ import {
   selectPrevIndex,
   selectRange,
 } from "core/utils/ui/selection";
-import { debounce } from "lodash";
+import { debounce } from "lodash-es";
 import { SelectOption, Superstate } from "makemd-core";
 import { fieldTypeForField, fieldTypeForType } from "schemas/mdb";
 import i18n from "shared/i18n";

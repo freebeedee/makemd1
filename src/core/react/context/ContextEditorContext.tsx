@@ -10,7 +10,7 @@ import { filterReturnForCol } from "core/utils/contexts/predicate/filter";
 import { sortReturnForCol } from "core/utils/contexts/predicate/sort";
 import { serializeOptionValue } from "core/utils/serializer";
 import { tagSpacePathFromTag } from "core/utils/strings";
-import _, { isEqual } from "lodash";
+import _, { isEqual } from "lodash-es";
 import { Superstate } from "makemd-core";
 import React, {
   createContext,

@@ -2,7 +2,7 @@
 import { wrapQuotes } from "core/utils/strings";
 import { fromHtml } from "hast-util-from-html";
 import parse from 'inline-style-parser';
-import { uniqueId } from "lodash";
+import { uniqueId } from "lodash-es";
 import { FrameTreeNode } from "shared/types/frameExec";
 export const htmlToTree = (html: string): FrameTreeNode => {
   const root = fromHtml(html, {

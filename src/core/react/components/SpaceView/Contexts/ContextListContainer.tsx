@@ -1,7 +1,7 @@
 import { ContextEditorContext } from "core/react/context/ContextEditorContext";
 import { FrameSelectionProvider } from "core/react/context/FrameSelectionContext";
 import { initiateString } from "core/utils/strings";
-import _ from "lodash";
+import _ from "lodash-es";
 import { Superstate } from "makemd-core";
 
 import { FramesMDBContext } from "core/react/context/FramesMDBContext";

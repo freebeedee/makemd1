@@ -1,7 +1,7 @@
 
 import { dbResultsToDBTables, getZippedDB, replaceDB, saveZippedDBFile, saveZippedDBToPath, selectDB } from "adapters/mdb/db/db";
 import { MDBFileTypeAdapter } from "adapters/mdb/mdbAdapter";
-import { debounce } from "lodash";
+import { debounce } from "lodash-es";
 import { CacheDBSchema } from "schemas/cache";
 import { DBRow } from "shared/types/mdb";
 import { LocalCachePersister } from "../../../shared/types/persister";

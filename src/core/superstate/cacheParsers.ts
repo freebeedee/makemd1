@@ -1,4 +1,4 @@
-import _ from "lodash";
+import _ from "lodash-es";
 import { PathCache } from "shared/types/caches";
 import { SpaceProperty, SpaceTable, SpaceTables } from "shared/types/mdb";
 import { ContextState, PathState, SpaceState } from "shared/types/PathState";
