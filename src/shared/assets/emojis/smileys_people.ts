@@ -3932,4 +3932,4 @@ export const smileys_people: EmojiData["smileys_people"] = [
     { n: ["people hugging"], u: "1fac2" },
     { n: ["footprints"], u: "1f463" },
   ],
-];
+};

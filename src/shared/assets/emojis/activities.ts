@@ -89,4 +89,4 @@ export const activities: EmojiData["activities"] = [
     { n: ["yarn", "ball of yarn"], u: "1f9f6" },
     { n: ["knot"], u: "1faa2" },
   ],
-];
+};

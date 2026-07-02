@@ -1,3 +1,4 @@
+```
 # Dependencies
 node_modules/
 
@@ -6,32 +7,33 @@ dist/
 build/
 target/
 
-# Python cache
+# Python specific
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-
-# Environment variables
+.Python
+env/
+venv/
+.venv/
+.ENV
 .env
-.env.local
 .env.*
+.env.local
+
+# Logs
+*.log
+
+# Coverage reports
+coverage/
+htmlcov/
+.coverage
 
 # IDE specific
 .vscode/
 .idea/
 *.swp
 *.swo
-
-# Logs
-*.log
-
-# Coverage
-coverage/
-htmlcov/
-.coverage
-
-# Temporary files
 *.tmp
 
 # OS generated
@@ -40,6 +42,32 @@ Thumbs.db
 
 # MyPy cache
 .mypy_cache/
-
-# Pytest cache
 .pytest_cache/
+
+# Gradle
+.gradle/
+
+# Compressed files
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
+```

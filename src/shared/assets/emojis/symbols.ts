@@ -300,4 +300,4 @@ export const symbols: EmojiData["symbols"] = [
     { n: ["white square button"], u: "1f533" },
     { n: ["black square button"], u: "1f532" },
   ],
-];
+};
