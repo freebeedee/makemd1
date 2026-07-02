@@ -299,5 +299,4 @@ export const symbols: EmojiData["symbols"] = [
     { n: ["radio button"], u: "1f518" },
     { n: ["white square button"], u: "1f533" },
     { n: ["black square button"], u: "1f532" },
-  ],
-};
+  ];

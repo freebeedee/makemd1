@@ -88,5 +88,4 @@ export const activities: EmojiData["activities"] = [
     { n: ["sewing needle"], u: "1faa1" },
     { n: ["yarn", "ball of yarn"], u: "1f9f6" },
     { n: ["knot"], u: "1faa2" },
-  ],
-};
+  ];
