@@ -1,7 +1,7 @@
 import { deletePath } from "core/superstate/utils/path";
 import { folderForTagSpace } from "core/utils/spaces/space";
 import { pathToParentPath } from "core/utils/strings";
-import { isString } from "lodash";
+import { isString } from "lodash-es";
 import { Superstate } from "makemd-core";
 import { PathPropertyName } from "shared/types/context";
 import { DBRow, SpaceTable } from "shared/types/mdb";

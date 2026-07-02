@@ -10,7 +10,7 @@ import {
   setTemplateInSpace,
   setTemplateNameInSpace,
 } from "core/superstate/utils/spaces";
-import { isString } from "lodash";
+import { isString } from "lodash-es";
 import { Superstate } from "makemd-core";
 import i18n from "shared/i18n";
 import React, { useContext } from "react";

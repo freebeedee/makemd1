@@ -1,4 +1,4 @@
-import _ from "lodash";
+import _ from "lodash-es";
 import { Superstate } from "makemd-core";
 import { rootToFrame } from "schemas/frames";
 import { FrameDragMode, FrameDropMode, FrameEditorMode, FrameEditorProps, FrameExecutable, FrameResizeMode, FrameState, FrameTreeNode, defaultFrameEditorProps } from "shared/types/frameExec";

@@ -6,7 +6,7 @@ import {
   pinPathToSpaceAtIndex,
 } from "core/superstate/utils/spaces";
 import { addTag } from "core/superstate/utils/tags";
-import { isString } from "lodash";
+import { isString } from "lodash-es";
 import { SelectOption, Superstate } from "makemd-core";
 import React from "react";
 import { default as i18n } from "shared/i18n";

@@ -1,6 +1,6 @@
 import { DropModifiers } from "core/react/components/Navigator/SpaceTree/SpaceTreeItem";
 import { TreeNode } from "core/superstate/utils/spaces";
-import _ from "lodash";
+import _ from "lodash-es";
 import { Superstate } from "makemd-core";
 import i18n from "shared/i18n";
 import React, { createContext, useEffect, useState } from "react";

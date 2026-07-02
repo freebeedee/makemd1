@@ -8,7 +8,7 @@ import {
 } from "core/superstate/utils/spaces";
 import { removePathIcon, savePathIcon } from "core/utils/emoji";
 import { isTouchScreen } from "core/utils/ui/screen";
-import { isString } from "lodash";
+import { isString } from "lodash-es";
 import { SelectOption, SelectOptionType, Superstate } from "makemd-core";
 import i18n from "shared/i18n";
 import React, { useContext, useMemo } from "react";

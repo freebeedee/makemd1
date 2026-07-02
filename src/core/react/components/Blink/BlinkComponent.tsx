@@ -1,6 +1,6 @@
 import { PathProvider } from "core/react/context/PathContext";
 import { allMetadata } from "core/utils/metadata";
-import { debounce } from "lodash";
+import { debounce } from "lodash-es";
 import { SelectOption, Superstate } from "makemd-core";
 import i18n from "shared/i18n";
 import React, { useEffect, useMemo, useState } from "react";

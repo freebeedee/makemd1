@@ -2,7 +2,7 @@
 
 import { linkColumns, removeLinksInRow, renameLinksInRow } from "core/utils/contexts/links";
 import { removeRowForPath, removeRowsForPath, renameRowForPath, reorderRowsForPath } from "core/utils/contexts/pathUpdates";
-import _ from "lodash";
+import _ from "lodash-es";
 import { PathPropertyName } from "shared/types/context";
 import { DBRow, DBRows, SpaceProperty, SpaceTable } from "shared/types/mdb";
 import { SpaceInfo } from "shared/types/spaceInfo";

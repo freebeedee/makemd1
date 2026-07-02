@@ -2,6 +2,7 @@ import { SpaceViewContainer } from "adapters/obsidian/SpaceViewContainer";
 import MakeMDPlugin from "main";
 import { MarkdownView } from "obsidian";
 import { parseStickerString } from "shared/utils/stickers";
+import { safeSetInnerHTML } from "shared/utils/htmlSanitizer";
 import { stickerFromString } from "../ui/sticker";
 
 
@@ -17,10 +18,10 @@ export const modifyTabSticker = (plugin: MakeMDPlugin) => {
       if (stickerType == "image") {
         const path = plugin.superstate.ui.getUIPath(plugin.superstate.imagesCache.get(stickerPath));
         if (path)
-          leaf.tabHeaderInnerIconEl.innerHTML = `<img src="${path}" />`;
+          safeSetInnerHTML(leaf.tabHeaderInnerIconEl, `<img src="${path}" />`);
       } else {
         const icon = stickerFromString(pathCache.label.sticker, plugin);
-        leaf.tabHeaderInnerIconEl.innerHTML = icon;
+        safeSetInnerHTML(leaf.tabHeaderInnerIconEl, icon);
       }
       
     }
@@ -37,10 +38,10 @@ export const modifyTabSticker = (plugin: MakeMDPlugin) => {
         const path = plugin.superstate.ui.getUIPath(plugin.superstate.imagesCache.get(stickerPath));
         if (!path)
          return path;
-        leaf.tabHeaderInnerIconEl.innerHTML = `<img src="${path}" />`;
+        safeSetInnerHTML(leaf.tabHeaderInnerIconEl, `<img src="${path}" />`);
       } else {
         const icon = stickerFromString(fileCache.label.sticker, plugin);
-        leaf.tabHeaderInnerIconEl.innerHTML = icon;
+        safeSetInnerHTML(leaf.tabHeaderInnerIconEl, icon);
       }
         
       }

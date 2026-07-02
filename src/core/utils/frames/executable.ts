@@ -2,7 +2,8 @@ import * as acorn from "acorn";
 import { FrameExecutable, FrameTreeNode } from "shared/types/frameExec";
 import { applyFunctionToObject } from "../objects";
 import { objectIsConst, stringIsConst } from "./frames";
-import { isString } from "lodash";
+import { isString } from "lodash-es";
+import { createSafeFunction } from "shared/utils/safeEval";
 
 const generateCodeForProp = (value: any, isClosure: boolean, type?: string) => {
     let codeBlock : string = value || '';
@@ -14,9 +15,10 @@ const generateCodeForProp = (value: any, isClosure: boolean, type?: string) => {
     
     let func
     try {
+    // Use safe evaluation instead of new Function to prevent arbitrary code execution
     func = isMultiLine && !(isClosure) && !codeBlock.startsWith('(') && !isObject
-    ? new Function(`with(this) { ${codeBlock} }`)
-    : new Function(`with(this) { return ${codeBlock}; }`);
+    ? createSafeFunction(`with(this) { ${codeBlock} }`)
+    : createSafeFunction(`return ${codeBlock}`);
     
     } catch (e) {
         console.log(e, codeBlock)

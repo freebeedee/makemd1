@@ -32,7 +32,7 @@ import { sortFnTypes } from "core/utils/contexts/predicate/sort";
 import { formatDate } from "core/utils/date";
 import { nameForField } from "core/utils/frames/frames";
 import { isPhone } from "core/utils/ui/screen";
-import { isString } from "lodash";
+import { isString } from "lodash-es";
 import { SelectOption, SelectOptionType, Superstate } from "makemd-core";
 import React, { useContext, useEffect, useMemo, useRef, useState } from "react";
 import { fieldTypeForField, stickerForField } from "schemas/mdb";

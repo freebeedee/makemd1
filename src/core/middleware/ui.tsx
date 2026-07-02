@@ -9,7 +9,7 @@ import {
   newTemplateInSpace,
 } from "core/superstate/utils/spaces";
 import { addTag } from "core/superstate/utils/tags";
-import _ from "lodash";
+import _ from "lodash-es";
 import { Superstate } from "makemd-core";
 import i18n from "shared/i18n";
 import React from "react";

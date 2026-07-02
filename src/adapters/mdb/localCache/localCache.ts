@@ -1,7 +1,7 @@
 
 import { dbResultsToDBTables, deleteFromDB, getZippedDB, insertIntoDB, replaceDB, saveZippedDBFile, selectDB } from "adapters/mdb/db/db";
 import { MDBFileTypeAdapter } from "adapters/mdb/mdbAdapter";
-import { debounce } from "lodash";
+import { debounce } from "lodash-es";
 import { CacheDBSchema } from "schemas/cache";
 import { DBRow, DBTables } from "shared/types/mdb";
 import { sanitizeSQLStatement } from "shared/utils/sanitizers";

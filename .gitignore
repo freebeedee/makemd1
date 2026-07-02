@@ -1,4 +1,3 @@
-```
 # Dependencies
 node_modules/
 
@@ -13,27 +12,34 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Environment files
+# Environment variables
 .env
 .env.local
 .env.*
 
-# IDE files
+# IDE specific
 .vscode/
 .idea/
 *.swp
 *.swo
-*.tmp
 
 # Logs
 *.log
 
-# Coverage reports
+# Coverage
 coverage/
 htmlcov/
 .coverage
 
-# OS generated files
+# Temporary files
+*.tmp
+
+# OS generated
 .DS_Store
 Thumbs.db
-```
+
+# MyPy cache
+.mypy_cache/
+
+# Pytest cache
+.pytest_cache/

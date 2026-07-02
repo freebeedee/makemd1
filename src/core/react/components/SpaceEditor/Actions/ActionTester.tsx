@@ -1,6 +1,6 @@
 import { runFormulaWithContext } from "core/utils/formula/parser";
 import { executeCode } from "core/utils/frames/runner";
-import { debounce } from "lodash";
+import { debounce } from "lodash-es";
 import { Superstate } from "makemd-core";
 import i18n from "shared/i18n";
 import React, { useEffect, useState } from "react";
