@@ -283,5 +283,4 @@ export const flags: EmojiData["flags"] = [
       n: ["wales flag", "flag-wales"],
       u: "1f3f4-e0067-e0062-e0077-e006c-e0073-e007f",
     },
-  ],
-};
+  ];

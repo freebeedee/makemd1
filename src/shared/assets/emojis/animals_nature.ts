@@ -146,5 +146,4 @@ export const animals_nature: EmojiData["animals_nature"] = [
     { n: ["leaves", "leaf fluttering in wind"], u: "1f343" },
     { n: ["empty nest"], u: "1fab9" },
     { n: ["nest with eggs"], u: "1faba" },
-  ],
-};
+  ];
