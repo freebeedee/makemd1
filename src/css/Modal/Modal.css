@@ -127,8 +127,6 @@
     height: 70vh;
     overflow: hidden;
     position: absolute;
-    display: flex;
-    flex-direction: column;
 }
 .mk-modal {
     padding: var(--size-4-4);
@@ -169,7 +167,6 @@
     display:flex;
     gap: 8px;
     padding: 12px;
-    flex-shrink: 0;
   }
   .mk-palette-search input {
     border:none;
