@@ -307,7 +307,7 @@ public api: API;
         await this.reloadSystemActions();
         // Optimized: Use for-loop instead of filter+map+map to avoid multiple iterations
         const allSpaces = this.allSpaces();
-        const nonDefaultSpaces: string[] = [];
+        const nonDefaultSpaces: SpaceInfo[] = [];
         for (let i = 0; i < allSpaces.length; i++) {
           if (allSpaces[i].type != 'default') {
             nonDefaultSpaces.push(allSpaces[i].space);
