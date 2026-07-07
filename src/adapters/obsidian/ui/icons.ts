@@ -1322,7 +1322,6 @@ export const heroIconsOutline: Record<string, string> = {
 // Export icon names for use in UI
 export const heroIconNames = [
   ...Object.keys(heroIconsOutline),
-  ...Object.keys(heroIconsSolid),
 ];
 
 
