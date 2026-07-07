@@ -197,12 +197,11 @@ padding: 8px;
   cursor: text;
 }
 
-  .mk-menu-sections {
+.mk-menu-sections {
 display: flex;
 padding: 6px 8px;
 width: 100%;
 gap: 8px;
-flex-shrink: 0;
 
 }
 .mk-menu-section {
